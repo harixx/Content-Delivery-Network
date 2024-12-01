@@ -72,16 +72,3 @@ Before delving into the details of this project, it is important to first unders
 - [ ] Rather than using the pre-determiend page rankings given in `pageviews.csv`, the rankings of pages could be re-computed to rank based off of views per byte of compressed data. This way, the cache hit ratio will be further optimized. 
 - [ ] Currently, all 7 HTTP servers start to download the exact same pages of total size 7 MB at runtime to `/cache/` on disk storage (to complement the 13 MB of compressed origin server pages it is receiving from the DNS server). However, this places immense strain on the origin server; it may be faster to have each of the 7 HTTP servers download a different 1 MB segment from the other 6, and then have them `scp` these compressed files in the background.
 
-## Program Demo (Video)
-
-- To see this program in action, please see a demo video of this program [linked here](https://youtu.be/wZDAvp1cLME).
-
-## Acknowledgements 
-
-- Zhongwei Zhang, my partner for this project. 
-- Professor Alden Jackson, my Computer Networking professor.
-
-## Contact Information
-
-- Alexander Wilcox
-- Email: alexander.w.wilcox [at] gmail.com
